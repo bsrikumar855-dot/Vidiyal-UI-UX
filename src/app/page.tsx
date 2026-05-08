@@ -188,16 +188,23 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-5"
           >
-            <Link href="/donate">
-              <Button size="xl" className="gap-2 w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white rounded-full px-8 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
-                <Heart className="w-5 h-5" />
-                Make an Impact
+            <Link href="/donate" className="group w-full sm:w-auto">
+              <Button size="xl" className="relative w-full sm:w-auto overflow-hidden rounded-full border border-emerald-300/30 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 px-8 text-white shadow-[0_18px_60px_rgba(16,185,129,0.35)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_24px_80px_rgba(20,184,166,0.45)] active:scale-[0.99]">
+                <span className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.4),transparent_28%),linear-gradient(120deg,transparent,rgba(255,255,255,0.22),transparent)] opacity-70 transition-transform duration-700 group-hover:translate-x-12" />
+                <span className="absolute inset-x-6 bottom-0 h-px bg-white/70" />
+                <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                  <Heart className="h-4 w-4 fill-white/10 text-white" />
+                </span>
+                <span className="relative">Make an Impact</span>
               </Button>
             </Link>
-            <Link href="/programs">
-              <Button size="xl" variant="outline" className="gap-2 w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 backdrop-blur-sm">
-                Explore Programs
-                <ArrowRight className="w-5 h-5" />
+            <Link href="/programs" className="group w-full sm:w-auto">
+              <Button size="xl" variant="outline" className="relative w-full sm:w-auto overflow-hidden rounded-full border border-white/25 bg-white/[0.06] px-8 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_18px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-white/[0.12] hover:shadow-[0_22px_70px_rgba(16,185,129,0.18)] active:scale-[0.99]">
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 -translate-x-full transition-transform duration-700 group-hover:translate-x-full" />
+                <span className="relative">Explore Programs</span>
+                <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 transition-all duration-300 group-hover:bg-emerald-400 group-hover:text-charcoal-950 group-hover:ring-emerald-200">
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                </span>
               </Button>
             </Link>
           </motion.div>
@@ -599,4 +606,3 @@ export default function HomePage() {
     </div>
   );
 }
-

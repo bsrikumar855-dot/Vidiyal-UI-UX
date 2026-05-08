@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Menu, X } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -44,10 +43,10 @@ export function FloatingNavbar() {
             : "bg-transparent"
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between h-20">
+        <div className="relative h-20 px-6 md:px-12">
+          <div className="relative flex h-full items-center justify-end">
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="absolute left-0 flex items-center group">
               <span className="font-display font-extrabold text-2xl tracking-[0.15em] uppercase bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 drop-shadow-[0_0_20px_rgba(251,191,36,0.15)] group-hover:from-amber-100 group-hover:via-yellow-200 group-hover:to-amber-300 transition-all duration-500 select-none">
                 VIDIYAL
               </span>
@@ -78,20 +77,10 @@ export function FloatingNavbar() {
               ))}
             </div>
 
-            {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-3">
-              <Link href="/donate">
-                <Button size="default" className="gap-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all">
-                  <Heart className="w-4 h-4" />
-                  Donate Now
-                </Button>
-              </Link>
-            </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors"
+              className="absolute right-0 md:hidden w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
               <AnimatePresence mode="wait">
