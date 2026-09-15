@@ -12,7 +12,7 @@ The platform combines premium UI/UX, cinematic storytelling, immersive animation
 
 ##  Vision
 
-Most donation platforms focus only on functionality.
+Most donation platforms focus only on functionality
 
 VIDIYAL was built to create emotional connection.
 
