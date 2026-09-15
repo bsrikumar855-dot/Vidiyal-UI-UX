@@ -10,7 +10,7 @@ The platform combines premium UI/UX, cinematic storytelling, immersive animation
 
 ---
 
-## ✨ Vision
+##  Vision
 
 Most donation platforms focus only on functionality.
 
